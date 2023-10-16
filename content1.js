@@ -60,7 +60,7 @@ const app = {
                 img3: './Mclaren-650s/porsche-911-3.jpg',
                 img4: './Mclaren-650s/porsche-911-4.jpg',
                 img5: './Mclaren-650s/porsche-911-5.jpg',
-                
+
             }
         },
         {
@@ -100,14 +100,14 @@ const app = {
                 img3: './Mclaren-650s/porsche-911-3.jpg',
                 img4: './Mclaren-650s/porsche-911-4.jpg',
                 img5: './Mclaren-650s/porsche-911-5.jpg',
-                
+
             }
         },
         {
             name: 'Vinfast VF 9 Plus 2023',
             path: './vinfast-vf9/vf9-1.jpg',
             price: '1.239.000.000',
-            script:'Có thể dễ dàng thấy được mục tiêu mà VinFast hướng đến là hướng dòng xe điện VinFast VF9 có thể sánh ngang với những mẫu SUV hạng sang cỡ lớn như Mercedes-Benz GLS hay BMW X7',
+            script: 'Có thể dễ dàng thấy được mục tiêu mà VinFast hướng đến là hướng dòng xe điện VinFast VF9 có thể sánh ngang với những mẫu SUV hạng sang cỡ lớn như Mercedes-Benz GLS hay BMW X7',
             listImage: {
                 img1: './vinfast-vf9/vf9-1.jpg',
                 img2: './vinfast-vf9/vf9-2.jpg',
@@ -142,11 +142,21 @@ const app = {
          </div>
          </div>
          <div class="image-animation">
+         <div class="image-animation-wrapp-buton">
+            <div class="image-animation-buton">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+         </div>
          <div class="image-animation-container">
              <img class="image-replace" src="./ROLLS-ROYCE/RR-3.jpg" />
              <img class="image-replace" src="./Porsche-911/porsche-911-1.jpg" />
              <img class="image-replace" src="./Mclaren-650s/mc-laren-1.jpg" />
              <img class="image-replace" src="./lamborghini-Aventador/lamborghini-aventador-1.jpg" />
+         </div>
+         <div class="image-animation-wrapp-buton">
+            <div class="image-animation-buton">
+            <i class="fas fa-chevron-right"></i>
+            </div>
          </div>
          </div>
          <div class="list-car">
@@ -275,23 +285,23 @@ const app = {
             currentPage = btnPage7;
         }
         // handleEventClick
-        
+
         handleEventClick = (i) => {
             const currentValue = this.listcarss[i];
             // ${Object.keys(currentValue.listImage).forEach((value,prop)=>
             //     [...prop,`<img src="${value}" alt="" width="500" height="300">`])}
-            const detail =(`<div class="detail-car">
+            const detail = (`<div class="detail-car">
             <div class="wrapp-detail-car">
                 <h1>${currentValue.name}</h1>
                 <img src="${currentValue.path}" alt="" width="500" height="300">
                 <div class="script-detail">
                     <span>${currentValue.script}</span>
                 </div>
-            ${Object.entries(currentValue.listImage).map(value=>(`<img src="${value[1]}" alt="" width="500" height="300">`))}
+            ${Object.entries(currentValue.listImage).map(value => (`<img src="${value[1]}" alt="" width="500" height="300">`))}
             </div>
         </div>`);
-           console.log(this.listcarss[i])
-           CT1.innerHTML=detail;
+            console.log(this.listcarss[i])
+            CT1.innerHTML = detail;
         }
     },
 
