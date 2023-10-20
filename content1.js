@@ -212,7 +212,7 @@ const app = {
         <div class="wrapp-product">
         ${this.listcarss.map((value) => (`
             <div class="card-product">
-                <img src="${value.path}" alt="" width="100%" height="380px">
+                <img src="${value.path}" alt="" width="100%" height="80%">
                 <div class="name-car">${value.name}</div>
                 <div class="price">
                     <div class="Number">
@@ -232,41 +232,46 @@ const app = {
             </div>
         </div>`)
         CT1.innerHTML = content1;
-        const btnPage1 = $('.button-page1');
+        const btnPage1 =  $('.button-page1');
         const btnPage2 = $('.button-page2');
         const btnPage3 = $('.button-page3');
         const btnPage4 = $('.button-page4');
         const btnPage5 = $('.button-page5');
         const btnPage6 = $('.button-page6');
         const btnPage7 = $('.button-page7');
+        const btnPage1_RP = $('.button-page1-rp');
+        const btnPage2_RP = $('.button-page2-rp');
+        const btnPage3_RP = $('.button-page3-rp');
+        const btnPage4_RP = $('.button-page4-rp');
+        const btnPage5_RP = $('.button-page5-rp');
         let currentPage = btnPage1
 
         currentPage.style.backgroundColor = '#ccc';
-        btnPage1.onclick = () => {
+        btnPage1_RP.onclick=btnPage1.onclick = () => {
             CT1.innerHTML = content1;
             currentPage.style.backgroundColor = 'rgba(234,237,240,0.8)';
             btnPage1.style.backgroundColor = '#ccc';
             currentPage = btnPage1;
         }
-        btnPage2.onclick = () => {
+        btnPage2_RP.onclick=btnPage2.onclick = () => {
             CT1.innerHTML = content2;
             currentPage.style.backgroundColor = 'rgba(234,237,240,0.8)';
             btnPage2.style.backgroundColor = '#ccc';
             currentPage = btnPage2;
         }
-        btnPage3.onclick = () => {
+        btnPage3_RP.onclick=btnPage3.onclick = () => {
             CT1.innerHTML = content3;
             currentPage.style.backgroundColor = 'rgba(234,237,240,0.8)';
             btnPage3.style.backgroundColor = '#ccc';
             currentPage = btnPage3;
         }
-        btnPage4.onclick = () => {
+        btnPage4_RP.onclick=btnPage4_RP.onclick=btnPage4.onclick = () => {
             CT1.innerHTML = comingsoon;
             currentPage.style.backgroundColor = 'rgba(234,237,240,0.8)';
             btnPage4.style.backgroundColor = '#ccc';
             currentPage = btnPage4;
         }
-        btnPage5.onclick = () => {
+        btnPage5_RP.onclick=btnPage5.onclick = () => {
             CT1.innerHTML = content2;
             currentPage.style.backgroundColor = 'rgba(234,237,240,0.8)';
             btnPage5.style.backgroundColor = '#ccc';
